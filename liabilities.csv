@@ -12,3 +12,4 @@ date,creditor,description,amount,credit,balance,status
 2026-10-05,Landlord,October Rent (unpaid),800000,800000,2424000,owed
 2026-10-05,Club17 Management,Rent balance Sept (paid 300k of 450k due) - unpaid balance,150000,150000,974000,owed
 2026-10-05,Club17 Management,October Rent (Club17 venue),400000,400000,1374000,owed
+2026-10-05,Maid at home,Salary for June-Sept (4 months),320000,320000,1694000,owed

@@ -1,4 +1,19 @@
-# Financial Analysis Report — 2026-10-05 (corrected)
+# Financial Analysis Report — 2026-10-06 (Updated 06 Oct 2026)
+
+> **LATEST UPDATE — 06 October 2026**: New liability recorded (Maid salary June–Sept 320,000 UGX). Updated net worth **−3,219,805 UGX** (assets 74,195; liabilities 3,294,000). Cash depleted to 0 (transport 1k + school transport 3k). See `financial_analysis/2026_10_06.md` for full daily snapshot. Previous master review (`2026_10_05.md`) preserved below.
+
+---
+
+# Financial Analysis Report — 2026-10-05 (Previous Master Review)
+
+## Net Position (Summary — 05 Oct)
+| Category | Value (UGX) | Note |
+|---|---|---|
+| Assets (MTN + Cash + Bank + Xeno) | 78,195 | MTN 997 + Cash 4,000 + Bank 997 + Xeno 72,201 |
+| Liabilities (Debts) | 2,974,000 | Before new Maid debt (320,000) |
+| **Net Worth (05 Oct)** | **−2,895,805** | Deeply insolvent |
+
+> Updated 06 Oct: Net worth now −3,219,805 (after Maid salary 320k + cash depletion 4k).
 
 ## Net Position (Summary)
 | Category | Value (UGX) | Note |
@@ -113,5 +128,7 @@
 - `cash_account.csv` — Cash flow: 36k +2k Feza -17.5k food -2k meds -2k airtime -7k UG Plastic -1.5k Leuben confirmed = 4,000
 - `bank_account.csv` — Standard Chartered Main Branch: 997
 - `xeno_savings.csv` — Savings reserve: 72,201
-- `liabilities.csv` — Running debt: 4k->9k (after clearance) + 550k Club17 Mgmt + 1.6M landlord + 620k loans + 195k schools = 2,974,000
-- `summary_account.csv` — Combined net worth: -2,896,805
+- `liabilities.csv` — Running debt: 4k→9k (after UG Plastic clearance) + 550k Club17 Mgmt + 1.6M landlord + 620k loans + 195k schools + **320k Maid salary (NEW 06 Oct)** = 3,294,000 UGX. See `liabilities.csv` and `financial_analysis/2026_10_06.md`.
+- `summary_account.csv` — Combined net worth: −3,219,805 UGX (updated 06 Oct); previous 05 Oct = −2,895,805.
+- `financial_analysis/2026_10_05.md` — Daily snapshot 05 Oct.
+- `financial_analysis/2026_10_06.md` — Daily snapshot 06 Oct (new debt, cash depletion, updated liabilities).
