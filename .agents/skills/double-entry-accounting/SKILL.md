@@ -1,30 +1,49 @@
 ---
 name: double-entry-accounting
-description: Double-entry bookkeeping with paired debit/credit entries, running balances per account, and a combined net-worth summary. Use when recording transactions across MTN, Cash, Bank, Savings, and Liabilities ledgers so assets always equal liabilities plus equity.
+description: Double-entry bookkeeping with paired debit/credit entries, running balances per account, and a combined net-worth summary. Use when recording transactions across MTN, Cash, Bank, Savings, and Liabilities ledgers.
 ---
 
 # Double-entry accounting
 
-Rules (derived from the current ledger set):
+## Account map
+Each `.csv` file is one account ledger:
+- `mtn_mobile_money.csv` — MTN Mobile Money (asset)
+- `cash_account.csv` — Cash Pocket (asset)
+- `bank_account.csv` — Standard Chartered Bank (asset)
+- `xeno_savings.csv` — Xeno Savings (asset)
+- `liabilities.csv` — All debts (liability; running balance increases with new debt, decreases with clearance)
+- `income.csv` — Income sources (revenue)
+- `summary_account.csv` — Combined net worth statement
 
-- Every transaction touches at least two accounts (debit = increase in assets/expenses, or decrease in liabilities/revenue; credit = opposite).
-- Each `.csv` ledger is one account: `mtn_mobile_money.csv`, `cash_account.csv`, `bank_account.csv`, `xeno_savings.csv`, `liabilities.csv`.
-- The combined position is computed as: **Assets (MTN + Cash + Bank + Savings) − Liabilities**. This equals Net Worth (equity in a single-owner setup).
-- Liabilities use an increasing running balance: each new debt increases the running total (`4000 → 11000 → 824000 → 2424000` shown in `liabilities.csv`).
-- Clearances reduce running liabilities: enter a clearance line in `liabilities.csv` with amount = cleared value and a new running balance.
+## Double-entry rules
+- Every transaction touches at least two accounts.
+- Asset accounts: debit = increase, credit = decrease.
+- Liability accounts: credit = increase (new debt), debit = decrease (clearance).
 
-Procedure:
-1. Read all `.csv` ledgers in root.
-2. Confirm each new entry has date, account, debit/credit, amount, running balance, and note.
-3. For liabilities: add new debt amount to previous running balance; for clearances: subtract and record clearance date.
-4. Update `summary_account.csv`: Total_Assets (sum of MTN + Cash + Bank + Xeno), Total_Liabilities (last running balance from liabilities.csv), Net_Worth = Assets − Liabilities.
-5. Write or append to `financial_analysis/YYYY_MM_DD.md` with the new net worth.
+**Example — cash withdrawal from MTN:**
+- Credit `mtn_mobile_money.csv` (MTN balance decreases; debit column entry)
+- Debit `cash_account.csv` (cash increases; credit column entry)
 
-Files referenced:
-- `mtn_mobile_money.csv` — MTN account
-- `cash_account.csv` — cash account
-- `bank_account.csv` — bank
-- `xeno_savings.csv` — savings
-- `liabilities.csv` — liabilities (increasing running balance)
-- `summary_account.csv` — combined statement
-- `AGENT.md` — agent rules
+**Example — new debt recorded (no cash moved yet):**
+- Credit `liabilities.csv` (liability increases; new row with updated running balance)
+- No asset entry until cash is actually paid out
+
+**Example — debt clearance paid from cash:**
+- Debit `liabilities.csv` (clearance row; running balance decreases by cleared amount)
+- Credit `cash_account.csv` (cash decreases; debit column entry)
+
+**Example — income received:**
+- Debit `cash_account.csv` or asset account (asset increases; credit column entry)
+- Record in `income.csv` (canonical income record)
+
+## Running balance rule
+- Each row in every `.csv` must have a `balance` value = previous row's `balance` ± this transaction.
+- `liabilities.csv` last row `balance` must equal `summary_account.csv` latest `Total_Liabilities`.
+- `summary_account.csv` `Net_Worth` = `Total_Assets` − `Total_Liabilities`.
+
+## Verification procedure per session
+1. Read last `balance` row from each asset `.csv` (`mtn_mobile_money`, `cash_account`, `bank_account`, `xeno_savings`); sum = `Total_Assets`.
+2. Read last `balance` row from `liabilities.csv` = `Total_Liabilities`.
+3. Compute Net Worth = Total_Assets − Total_Liabilities.
+4. Compare to `summary_account.csv` latest row — all three values must match.
+5. If mismatch: re-trace running balances row by row in the mismatched file to find the break.

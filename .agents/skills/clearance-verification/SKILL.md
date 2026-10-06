@@ -1,18 +1,28 @@
 ---
 name: clearance-verification
-description: Ensure every liability clearance (e.g. UG Plastic 7,000 cleared 6 Oct 2026) is verified in both liabilities.csv and a dated .md file before summary_account.csv is updated. Prevents phantom reductions in net liability totals.
+description: Ensure every liability clearance is verified in both liabilities.csv and a dated .md file before summary_account.csv is updated. Prevents phantom reductions in net liability totals.
 ---
 
 # Clearance verification
 
-Verification checklist (must complete before updating `summary_account.csv`):
-1. `liabilities.csv` contains original debt entry (amount, running balance before clearance).
-2. `liabilities.csv` contains clearance entry with: same creditor/description + `CLEARED` / `paid` note, amount = cleared value, new running balance = previous − cleared.
-3. `financial_analysis/YYYY_MM_DD.md` (date of clearance event, e.g. 2026_10_05.md or 2026_10_07.md) records: creditor, original amount, cleared amount, date of clearance, note confirming books updated.
-4. `summary_account.csv` reflects new liabilities total = previous total − cleared amount.
+## Verification checklist
+Complete all steps before updating `summary_account.csv`:
+
+1. `liabilities.csv` contains the original debt entry (creditor, amount, running balance before clearance).
+2. `liabilities.csv` contains a clearance row for the same creditor/description with:
+   - `amount` = negative of cleared value
+   - `balance` = previous running balance − cleared amount
+   - `status` = `paid in full` or `cleared`
+3. `financial_analysis/YYYY_MM_DD.md` (date of clearance event) records: creditor, original amount, cleared amount, date of clearance, confirmation that books updated.
+4. `summary_account.csv` new row `Total_Liabilities` = previous `Total_Liabilities` − cleared amount.
 5. Net worth improves by cleared amount (assets unchanged, liabilities down).
 
-Example (current):
-- Original: UG 200ml Plastic 7,000 (Club17), running balance 11,000.
-- Clearance entry: 7,000 cleared, running balance 824,000 (from previous 831,000 with Beverly's 145k added; check arithmetic per session).
-- Confirm `summary_account.csv` row shows liabilities = 824,000 (pre-landlord) or 2,424,000 (post-landlord with clearance applied to running total correctly).
+## How to compute post-clearance net worth
+- New Net Worth = previous Net Worth + cleared amount
+- Verify: new `summary_account.csv` `Net_Worth` = `Total_Assets` − new `Total_Liabilities`
+
+## Running balance arithmetic rule
+- Each new debt row: `balance` = previous row's `balance` + `amount`
+- Each clearance row: `balance` = previous row's `balance` − cleared amount
+- Final row's `balance` in `liabilities.csv` must equal `Total_Liabilities` in `summary_account.csv` latest row
+- If there is a mismatch: re-trace row by row from the top of `liabilities.csv` to find the break

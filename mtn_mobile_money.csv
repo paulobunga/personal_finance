@@ -3,3 +3,7 @@ date,description,debit,credit,balance,note
 2026-10-05,Received mobile money,,52000,38387,credit
 2026-10-05,Withdrawal to pocket,36000,,2387,asset moved out
 2026-10-05,MTN withdrawal fee,1390,,997,expense
+2026-10-06,Sent to wife (school pickup + food supplies),13000,,0,debit - transfer to wife; purpose: child school pickup and home food supplies
+2026-10-06,MTN send fee,500,,-500,transaction fee for sending 13000 to wife
+2026-10-06,MomoAdvance auto-covered shortfall,,12503,-12503,MTN advanced 12503 (13500 total - 997 available = 12503 owed to MTN)
+2026-10-06,MomoAdvance limit,0,0,-12503,MomoAdvance limit set at 14000 UGX as of 06 Oct 2026
