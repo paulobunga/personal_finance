@@ -1,0 +1,11 @@
+priority,goal,linked_item,target_ugx,saved_ugx,remaining_ugx,xeno_allocated,status,notes
+1,MacBook Air M2 Fund,MacBook Air M2,2500000,72201,2427799,yes,saving,Current Xeno balance 72201 allocated here first; top priority freelancing tool
+2,Mac Mini M4 Fund,Mac Mini M4,3500000,0,3500000,yes,saving,Funded after MacBook Air goal reached
+3,Mac Stand Fund,Mac Stand,220000,0,220000,yes,saving,Funded after Mac Mini goal reached; pairs with Mac Mini
+4,Monitor Fund,34 Inch Monitor,1800000,0,1800000,yes,saving,Funded after Mac Stand goal reached
+5,Desk Fund,Electric Adjustable Desk,1550000,0,1550000,yes,saving,Workspace foundation; funded after monitor
+6,Chair Fund,Ergonomic Chair,690000,0,690000,yes,saving,Pairs with desk; funded after desk goal reached
+7,Mouse Fund,Logitech MX Master 3S,380000,0,380000,yes,saving,Funded after chair goal reached
+8,Keyboard Fund,Aula Mini 60HE Max,280000,0,280000,yes,saving,Funded after mouse goal reached
+9,Lamp Fund,Quntis Bar Lamp,350000,0,350000,yes,saving,Monitor bar lamp; funded after keyboard goal reached
+10,Mouse Pad Fund,Mouse Pad,50000,0,50000,yes,saving,Final goal; lowest priority

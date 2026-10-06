@@ -1,173 +1,199 @@
-# Financial Analysis Report — 2026-10-06 (Updated 06 Oct 2026 — Evening)
+# Financial Analysis Report — 06 October 2026
 
-> **LATEST UPDATE — 06 October 2026 (Evening)**: Sent 13,000 UGX to wife (child school pickup + home food supplies) via MTN + 500 fee. MTN 997 used first; MTN MomoAdvance covered 12,503 shortfall. New MomoAdvance liability: 12,503. Updated net worth **−3,245,808 UGX** (assets 60,695; liabilities 3,306,503). See `financial_analysis/2026_10_06.md` for full daily snapshot.
-
----
-
-## Net Position (Latest — 06 Oct 2026, Evening)
-| Category | Value (UGX) | Note |
-|---|---|---|
-| Total Assets | 60,695 | MTN −12,503 + Cash 0 + Bank 997 + Xeno 72,201 |
-| Total Liabilities | 3,306,503 | Previous 3,294,000 + MomoAdvance 12,503 |
-| **Net Worth** | **−3,245,808** | Deeply insolvent; liabilities ~54× liquid assets |
+> **As of 06 Oct 2026 (Evening)** — All ledgers reconciled. Net worth **−3,245,808 UGX**. Zero cash, MTN in overdraft (−12,503 MomoAdvance), savings protected (72,201). Total liabilities 3,306,503 UGX.
 
 ---
 
-## Assets
+## Net Position Summary
+| | 05 Oct | 06 Oct (Morning) | 06 Oct (Evening) |
+|---|---|---|---|
+| Total Assets (UGX) | 78,195 | 74,195 | **60,695** |
+| Total Liabilities (UGX) | 2,974,000 | 3,294,000 | **3,306,503** |
+| Net Worth (UGX) | −2,895,805 | −3,219,805 | **−3,245,808** |
+| Liability-to-Asset Ratio | 38:1 | 44:1 | **54:1** |
+
+---
+
+## Assets (End of Day — 06 Oct)
 | Account | Balance (UGX) | File | Note |
 |---|---|---|---|
-| MTN Mobile Money | −12,503 | `mtn_mobile_money.csv` | MomoAdvance owed 12,503; sent 13k to wife + 500 fee; 997 used first then MTN advanced 12,503 |
-| Cash (pocket) | 0 | `cash_account.csv` | Fully depleted 06 Oct (transport 1k + daughter school transport 3k) |
+| MTN Mobile Money | −12,503 | `mtn_mobile_money.csv` | MomoAdvance owed; sent 13k to wife + 500 fee; 997 used first; MTN advanced 12,503 |
+| Cash Pocket | 0 | `cash_account.csv` | Depleted: transport 1k + daughter school transport 3k |
 | Standard Chartered Bank | 997 | `bank_account.csv` | Minimal transactional balance |
-| Xeno Savings | 72,201 | `xeno_savings.csv` | Only meaningful reserve; protected |
+| Xeno Savings | 72,201 | `xeno_savings.csv` | Only meaningful reserve; 119% of liquid assets; protected |
 | **Total Assets** | **60,695** | `summary_account.csv` | |
 
 ---
 
-## Liabilities (All Debts)
+## Liabilities (End of Day — 06 Oct)
 | Creditor | Description | Amount (UGX) | Running Balance | Status | Due Date | Category |
 |---|---|---|---|---|---|---|
 | Club17 | 2 Sodas | 4,000 | 4,000 | Owed | — | Social |
-| Club17 | UG 200ml Plastic | 7,000 | 11,000 | **Cleared** (07 Oct) | — | Social |
+| Club17 | UG 200ml Plastic | 7,000 | 11,000 | **Cleared** | — | Social |
 | Club17 | Tusker Malt (Beer) | 5,000 | 16,000 | Owed | — | Social |
 | Patricia | Personal loan | 100,000 | 116,000 | Owed | — | Loan |
 | Remmy Nalutaya | Personal loan | 220,000 | 336,000 | Owed | — | Loan |
 | Ahmed Sameer | Personal loan | 300,000 | 636,000 | Owed | — | Loan |
-| Britney | School fees balance | 50,000 | 686,000 | Owed | 2026-10-15 | School |
-| Beverly | School fees balance | 145,000 | 831,000 | Owed | 2026-10-15 | School |
-| Club17 | UG Plastic CLEARED | −7,000 | 824,000 | Cleared | — | Social |
-| Landlord | September Rent (unpaid) | 800,000 | 1,624,000 | Owed | 2026-10-31 | Rent |
-| Landlord | October Rent (unpaid) | 800,000 | 2,424,000 | Owed | 2026-10-31 | Rent |
+| Britney | School fees balance | 50,000 | 686,000 | Owed | **2026-10-15** | School |
+| Beverly | School fees balance | 145,000 | 831,000 | Owed | **2026-10-15** | School |
+| Club17 | UG Plastic — CLEARED | −7,000 | 824,000 | Cleared | — | Social |
+| Landlord | September Rent | 800,000 | 1,624,000 | Owed | 2026-10-31 | Rent |
+| Landlord | October Rent | 800,000 | 2,424,000 | Owed | 2026-10-31 | Rent |
 | Club17 Management | Sept rent shortfall | 150,000 | 2,574,000 | Owed | 2026-10-31 | Rent |
 | Club17 Management | October rent | 400,000 | 2,974,000 | Owed | 2026-10-31 | Rent |
 | Maid at home | Salary June–Sept (4 months) | 320,000 | 3,294,000 | Owed | 2026-10-31 | Salary |
+| MTN MomoAdvance | Auto-advance shortfall (06 Oct) | 12,503 | 3,306,503 | Owed | On next receipt | Loan |
 
-> **Net owed liabilities** (excluding cleared UG Plastic 7,000) = **3,294,000 UGX**
+> **Total owed liabilities = 3,306,503 UGX** (net of UG Plastic clearance 7,000)
 
 ---
 
-## Income (Oct 2026, from `income.csv`)
+## Debt by Category
+| Category | Amount (UGX) | % of Total Debt |
+|---|---|---|
+| Rent (Landlord + Club17 Mgmt) | 2,150,000 | 65.0% |
+| Personal loans (Patricia + Remmy + Ahmed) | 620,000 | 18.8% |
+| Salary (Maid) | 320,000 | 9.7% |
+| School fees (Britney + Beverly) | 195,000 | 5.9% |
+| MomoAdvance (MTN) | 12,503 | 0.4% |
+| Social (Club17 venue) | 9,000 | 0.3% |
+| **Total** | **3,306,503** | |
+
+---
+
+## Income (October 2026, from `income.csv`)
 | Date | Source | Description | Amount (UGX) | Category |
 |---|---|---|---|---|
 | 2026-10-05 | Feza Events (U) Ltd | Transport allowance | 2,000 | Transport allowance |
-| **Total Income (Oct)** | | | **2,000** | |
+| **Total (Oct)** | | | **2,000** | |
 
-> Income is critically insufficient relative to liabilities. Monthly income recorded = 2,000 UGX; monthly rent obligation alone ≈ 1,600,000 UGX.
+> Monthly income 2,000 UGX vs liabilities 3,306,503 UGX = **0.06% income coverage**. Income generation is the single highest-leverage action available.
 
 ---
 
-## Spending Habits (Cash Account — Oct 2026)
-| Category | Amount (UGX) | Note |
+## Spending Analysis (Cash Account — Oct 2026)
+| Category | Amount (UGX) | Detail |
 |---|---|---|
-| Food | 17,500 | Cooking oil 4,500; 8 Eggs 4,000; Chicken 6,000; ORIS packet 5,000 |
-| Social (Club17) | 11,000 | Sodas 4k + Tusker 5k + UG Plastic 7k (cleared); on-site chicken included in Food |
-| Transport | 4,000 | Home transport 1k + daughter school transport 3k |
-| Expense (ORIS delivery) | 8,500 | ORIS purchase 2k + ORIS delivery 1.5k + Packet of ORIS 5k |
-| Health | 2,000 | Paracetamol 1k + Cetrizine 1k |
+| Food | 17,500 | Cooking oil 4,500; Eggs 4,000; Chicken 6,000; ORIS 5,000 (reclassified) |
+| Expense (ORIS) | 8,500 | ORIS purchase 2,000 + delivery 1,500 + packet 5,000 |
+| Debt clearance | 7,000 | UG Plastic paid from cash (liability cleared) |
+| Transport | 4,000 | Home transport 1,000 + daughter school 3,000 |
+| Social (Club17) | — | Sodas + Tusker recorded as liabilities (not paid from cash) |
+| Health | 2,000 | Paracetamol 1,000 + Cetrizine 1,000 |
 | Telecom | 2,000 | Airtel airtime |
-| Debt clearance | 7,000 | UG Plastic paid from cash |
-
-> Cash received Oct: 38,000 (36k MTN withdrawal + 2k Feza income). Cash depleted to 0 over 2 days.
-
-**Patterns identified:**
-- **Club17 is a major financial drain** — venue rent (550,000) + social debts (9,000) + on-site consumption compounds exposure.
-- **Rapid cash burn** — 38,000 depleted to 0 with only 2,000 income; no surplus generated.
-- **Zero discretionary reserve** — cash at 0; MTN blocked by MomoAdvance; any expense must draw from savings (protected) or await new income.
+> Total cash received: 38,000 (36k MTN + 2k Feza). Ending balance: 0. **Burn rate: 100% over 2 days.**
 
 ---
 
-## Debt Structure
-| Category | Amount (UGX) | % of Total Debt |
-|---|---|---|
-| Rent (Landlord + Club17 Mgmt) | 2,150,000 | 65.3% |
-| Personal loans | 620,000 | 18.8% |
-| Salary (Maid) | 320,000 | 9.7% |
-| School fees | 195,000 | 5.9% |
-| Social (Club17 venue) | 9,000 | 0.3% |
-| **Total** | **3,294,000** | |
+## MomoAdvance Tracker (06 Oct)
+| | UGX |
+|---|---|
+| Limit | 14,000 |
+| Currently owed | 12,503 |
+| **Remaining headroom** | **1,497** |
+| Days since advance | 0 |
+
+> Headroom functionally exhausted (1,497 remaining). Clear on next MTN receipt before any new sends.
 
 ---
 
 ## Key Red Flags
-1. Net worth **−3,219,805 UGX** — liabilities ~44× liquid assets
-2. **Cash = 0** — zero buffer; any expense requires MTN (blocked by MomoAdvance 13,613) or Xeno (protected)
-3. **MTN MomoAdvance debt 12,503** — blocks mobile money; must clear on next MTN receipt (1,390 withdrawal fee from earlier was a separate already-expensed transaction fee)
-4. **No meaningful income** — only 2,000 UGX (Feza transport allowance) recorded in Oct; structural income deficit
-5. **Rent compounding** — 2,150,000 already owed; adds ~1,600,000/month if unpaid (Landlord 800k + Club17 Mgmt ~800k)
-6. **School fees deadline** — 195,000 (Britney + Beverly) due 2026-10-15; access risk if unpaid
-7. **Savings coverage 2.2%** — Xeno 72,201 covers only 2.2% of 3,294,000 liabilities (safe threshold = 10%)
+1. **Net worth −3,245,808 UGX** — liabilities 54× liquid assets; worsening daily
+2. **Cash = 0** — zero buffer; every account either negative, zero, or protected
+3. **MTN blocked** — MomoAdvance 12,503 owed; 1,497 headroom only; cannot send/pay until cleared
+4. **School fees deadline 2026-10-15** — 195,000 owed (Britney 50k + Beverly 145k); 9 days remaining; exclusion risk
+5. **Zero income (06 Oct)** — Oct total 2,000 UGX; structural income deficit; no surplus possible at current rate
+6. **Rent compounding** — 2,150,000 owed; adds ~1,600,000/month if unpaid
+7. **Savings coverage 2.18%** — Xeno 72,201 covers only 2.18% of 3,306,503 liabilities (safe threshold = 10%)
+8. **Liability growth rate** — liabilities grew 332,503 in one day (06 Oct); assets fell 13,500; net worsened 346,003
 
 ---
 
-## Forecast (from `forecasting-calculations` skill)
+## Forecast
 
 ### Current ratios
-- Debt-to-Asset Ratio: 3,294,000 / 74,195 = **44.4:1**
-- Savings Coverage: 72,201 / 3,294,000 = **2.2%**
-- Monthly income (Oct): **2,000 UGX** (= 0.06% of liabilities)
+| Metric | Value |
+|---|---|
+| Debt-to-Asset Ratio | 3,306,503 / 60,695 = **54.5:1** |
+| Savings Coverage | 72,201 / 3,306,503 = **2.18%** |
+| Monthly income | 2,000 UGX |
+| Monthly rent liability growth (if unpaid) | ~1,600,000 UGX |
 
-### Scenario A — No income, no payments (+1/+2/+3 months baseline drift)
-| Month | Rent Added | Total Liabilities | Net Worth |
+### Scenario A — No income, no payments (baseline drift)
+| Timeframe | Rent Added | Total Liabilities | Net Worth |
 |---|---|---|---|
-| Current (Oct) | — | 3,294,000 | −3,219,805 |
-| +1 month (Nov) | +1,600,000 | 4,894,000 | −4,819,805 |
-| +2 months (Dec) | +1,600,000 | 6,494,000 | −6,419,805 |
-| +3 months (Jan) | +1,600,000 | 8,094,000 | −8,019,805 |
+| Now (06 Oct) | — | 3,306,503 | −3,245,808 |
+| +1 month (Nov) | +1,600,000 | 4,906,503 | −4,845,808 |
+| +2 months (Dec) | +1,600,000 | 6,506,503 | −6,445,808 |
+| +3 months (Jan) | +1,600,000 | 8,106,503 | −8,045,808 |
 
-> Each month without rent payment or income worsens position by ~1,600,000 UGX.
+> Without income or payments, position worsens by ~1,600,000 UGX/month.
 
-### Scenario B — School fees cleared from Xeno (195,000 needed)
-- Xeno current: 72,201 — insufficient to cover full 195,000 school fees alone
-- Partial: use 72,201 from Xeno → covers 72,201 of 195,000; remaining gap = 122,799
-- Net Worth: unchanged (assets down = liabilities down by 72,201)
-- Savings wiped to 0 → breaches 1% savings-protection threshold
-- **Not recommended without additional income to cover remaining gap**
+### Scenario B — MomoAdvance cleared (12,503 UGX from next receipt)
+- MTN unblocked; mobile money channel restored
+- Net Worth improves by 12,503 → **−3,233,305 UGX**
+- MomoAdvance headroom restored to full 14,000
+- **Recommended: first use of any incoming MTN receipt**
 
-### Scenario C — MomoAdvance cleared from next cash inflow (13,613 UGX)
-- Clear MomoAdvance 13,613 UGX (the 1,390 withdrawal fee was a separate expense already recorded in `mtn_mobile_money.csv`)
-- MTN unblocked; Debt-to-Asset ratio improves marginally
-- Net Worth improves by 13,613 to −3,206,192
-- **Recommended as first use of any cash inflow received**
+### Scenario C — School fees partial payment from Xeno (50,000 UGX)
+- Xeno balance: 72,201 − 50,000 = 22,201
+- School fees remaining: 195,000 − 50,000 = 145,000
+- Net Worth: unchanged (assets down = liabilities down by 50,000)
+- Savings coverage: 22,201 / 3,256,503 = **0.68%** — breaches 1% threshold
+- **Not recommended without additional income to maintain savings floor**
 
-### Scenario D — Single income event (e.g. 500,000 UGX)
-- Total Assets: 74,195 + 500,000 = 574,195
-- Total Liabilities: unchanged at 3,294,000
-- Net Worth: −2,719,805 (improves by 500,000 UGX)
-- Debt-to-Asset Ratio: 3,294,000 / 574,195 = **5.7:1** (down from 44.4:1)
-- **Highest-leverage action available; income generation is the primary lever**
+### Scenario D — Income event (e.g. 200,000 UGX)
+- Total Assets: 60,695 + 200,000 = 260,695
+- Net Worth: −3,106,503 (improves by 200,000)
+- Debt-to-Asset Ratio: 3,306,503 / 260,695 = **12.7:1** (down from 54.5:1)
+- Could clear MomoAdvance (12,503) + contribute toward school fees
+- **Highest-leverage action available**
+
+---
+
+## Debt Repayment Priority
+1. **MTN MomoAdvance 12,503** — clear on next MTN receipt; restores mobile money; only 1,497 headroom remains
+2. **School fees 195,000** — due 2026-10-15 (9 days); Britney 50k + Beverly 145k; partial payment from any income first
+3. **Maid salary 320,000** — ethical salary obligation; June–Sept; negotiate payment plan
+4. **Landlord rent 1,600,000** — eviction risk; negotiate part-payment; propose 200k–300k per month
+5. **Club17 social 9,000** — freeze all new social spending; small amount but symptomatic
+6. **Personal loans 620,000** — Patricia + Remmy + Ahmed; negotiate formal restructuring with written terms
+7. **Club17 Management rent 550,000** — venue contract risk; negotiate alongside landlord
 
 ---
 
 ## Recommendations
 
 ### Immediate (0–7 days)
-1. Clear MomoAdvance 15,003 UGX from next cash inflow — unblocks mobile money channel
-2. Freeze all Club17 social spending (Sodas 4k, Tusker 5k owed)
-3. Negotiate or make partial payment toward school fees (Britney + Beverly, 195,000 due 2026-10-15)
+1. Clear MomoAdvance 12,503 on next MTN receipt — restores mobile money channel
+2. Seek any income event; prioritise school fee contribution before 15 Oct
+3. Freeze Club17 social spending (Sodas 4k + Tusker 5k still owed)
 
 ### Short-term (1–4 weeks)
-4. Pursue income event — even 100,000 UGX drops Debt-to-Asset ratio from 44:1 to ~26:1
-5. Negotiate landlord 1,624,000 — propose part-payment plan to slow monthly accumulation
-6. Negotiate Club17 Management rent 550,000 — separate from venue social debt
+4. Negotiate landlord — propose part-payment (200k–300k) to stop monthly compounding
+5. Formalise maid salary repayment plan — even 50k/month shows intent
+6. Clarify personal loan repayment terms (Patricia, Remmy, Ahmed) — written agreement to protect relationships
 
 ### Medium-term (1–3 months)
-7. Use `cash_account.csv` category breakdown to cap social spending < 10% of any cash inflow
-8. Formalise repayment terms for personal loans (Patricia 100k, Remmy 220k, Ahmed 300k)
-9. Record maid salary payment plan in `liabilities.csv` or daily `.md`
+7. Use `cash_account.csv` category data to cap social + expense categories < 10% of any cash inflow
+8. Target at least one income source generating 100,000+ UGX/month
+9. Do not touch Xeno savings until monthly income exceeds 50,000 UGX
 
 ### Long-term (3+ months)
-10. Target Debt-to-Asset ratio < 2:1 (currently 44:1); requires sustained income + debt clearances
-11. Rebuild Xeno savings to 10%+ of remaining liabilities once debt < 500,000 UGX
+10. Target Debt-to-Asset ratio < 5:1 (currently 54:1)
+11. Rebuild Xeno to 10%+ of remaining liabilities once debt falls below 1,000,000 UGX
 
 ---
 
 ## Ledger Files Reference
-- `mtn_mobile_money.csv` — MTN balance and MomoAdvance
-- `cash_account.csv` — Cash flow with `category` column
-- `bank_account.csv` — Standard Chartered: 997
-- `xeno_savings.csv` — Savings reserve: 72,201 (protected)
-- `income.csv` — Income ledger (canonical source): 2,000 UGX Oct total
-- `liabilities.csv` — Running debt: 3,294,000 (repaired running balance; `due_date` + `category` columns)
-- `summary_account.csv` — Combined net worth: −3,219,805 UGX
-- `financial_analysis/2026_10_05.md` — Daily snapshot 05 Oct
-- `financial_analysis/2026_10_06.md` — Daily snapshot 06 Oct
+| File | Purpose | Key Balance |
+|---|---|---|
+| `mtn_mobile_money.csv` | MTN account | −12,503 (MomoAdvance owed) |
+| `cash_account.csv` | Cash pocket | 0 |
+| `bank_account.csv` | Standard Chartered | 997 |
+| `xeno_savings.csv` | Savings reserve | 72,201 (protected) |
+| `income.csv` | Income ledger | 2,000 (Oct total) |
+| `liabilities.csv` | All debts | 3,306,503 (running balance) |
+| `summary_account.csv` | Net worth | −3,245,808 |
+| `financial_analysis/2026_10_05.md` | Daily snapshot 05 Oct | Net −2,895,805 |
+| `financial_analysis/2026_10_06.md` | Daily snapshot 06 Oct | Net −3,245,808 |
