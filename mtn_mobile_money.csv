@@ -1,0 +1,5 @@
+date,description,debit,credit,balance,note
+2026-10-05,Owed MomoAdvance (liability),,13613,-13613,negative = owed
+2026-10-05,Received mobile money,,52000,38387,credit
+2026-10-05,Withdrawal to pocket,36000,,2387,asset moved out
+2026-10-05,MTN withdrawal fee,1390,,997,expense

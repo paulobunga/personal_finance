@@ -1,0 +1,14 @@
+date,creditor,description,amount,credit,balance,status
+2026-10-05,Club17,2 Sodas,4000,4000,4000,owed
+2026-10-05,Club17,UG 200ml Plastic,7000,7000,11000,owed - CLEARED 07-Oct
+2026-10-05,Club17,Tusker Malt (Beer),5000,5000,9000,owed
+2026-10-05,Patricia,Personal loan,100000,100000,109000,owed
+2026-10-05,Remmy Nalutaya,Personal loan,220000,220000,329000,owed
+2026-10-05,Ahmed Sameer,Personal loan,300000,300000,629000,owed
+2026-10-05,Britney,Previous school fees balance,50000,50000,679000,owed
+2026-10-05,Beverly,Previous school fees balance (Beverly School),145000,145000,824000,owed
+2026-10-07,Club17,UG 200ml Plastic - CLEARED,7000,7000,824000,paid in full - books updated 6 Oct 2026
+2026-10-05,Landlord,September Rent (unpaid),800000,800000,1624000,owed
+2026-10-05,Landlord,October Rent (unpaid),800000,800000,2424000,owed
+2026-10-05,Club17 Management,Rent balance Sept (paid 300k of 450k due) - unpaid balance,150000,150000,974000,owed
+2026-10-05,Club17 Management,October Rent (Club17 venue),400000,400000,1374000,owed
