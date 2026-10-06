@@ -8,9 +8,14 @@ date,creditor,description,amount,credit,balance,status,due_date,category
 2026-10-05,Britney,Previous school fees balance,50000,50000,686000,owed,2026-10-15,school
 2026-10-05,Beverly,Previous school fees balance (Beverly School),145000,145000,831000,owed,2026-10-15,school
 2026-10-07,Club17,UG 200ml Plastic - CLEARED,-7000,-7000,824000,paid in full,,social
-2026-10-05,Landlord,September Rent (unpaid),800000,800000,1624000,owed,2026-10-31,rent
-2026-10-05,Landlord,October Rent (unpaid),800000,800000,2424000,owed,2026-10-31,rent
-2026-10-05,Club17 Management,Rent balance Sept (paid 300k of 450k due) - unpaid balance,150000,150000,2574000,owed,2026-10-31,rent
-2026-10-05,Club17 Management,October Rent (Club17 venue),400000,400000,2974000,owed,2026-10-31,rent
+2026-10-05,Landlord,September Rent - Home (unpaid),800000,800000,1624000,owed,2026-10-31,rent
+2026-10-05,Landlord,October Rent - Home (unpaid),800000,800000,2424000,owed,2026-10-31,rent
+2026-10-05,Club17 Management,Feza Kitchen & Grill - Sept rent shortfall (paid 300k of 450k),150000,150000,2574000,owed,2026-10-31,rent_business
+2026-10-05,Club17 Management,Feza Kitchen & Grill - October rent,400000,400000,2974000,owed,2026-10-31,rent_business
 2026-10-05,Maid at home,Salary for June-Sept (4 months),320000,320000,3294000,owed,2026-10-31,salary
 2026-10-06,MTN MomoAdvance,MomoAdvance shortfall (sent 13000 + 500 fee; 997 available; MTN advanced 12503),12503,12503,3306503,owed,2026-10-31,loan
+2026-10-06,MTN MomoAdvance,MomoAdvance fully cleared by auto-repayment from James Katana 20000 receipt,-12503,-12503,3294000,paid in full,,loan
+2026-10-06,Club17 Management,Feza Kitchen & Grill - November rent (upcoming),400000,400000,3694000,upcoming,2026-11-30,rent_business
+2026-10-06,Club17 Management,Feza Kitchen & Grill - December rent (upcoming),400000,400000,4094000,upcoming,2026-12-31,rent_business
+2026-10-06,Feza Kitchen & Grill,Chef - October salary (due end of week),400000,400000,4494000,owed,2026-10-10,salary_business
+2026-10-06,Feza Kitchen & Grill,Waitress - Week 1 salary (due end of week),38000,38000,4532000,owed,2026-10-10,salary_business

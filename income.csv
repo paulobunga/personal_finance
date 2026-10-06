@@ -1,2 +1,4 @@
 date,source,description,amount,balance,note,category
 2026-10-05,Feza Events (U) Ltd,Transport allowance,2000,2000,Cash received - also recorded as credit in cash_account.csv,transport_allowance
+2026-10-05,James Katana (UHPAB),Payment received,52000,54000,Received via MTN Mobile Money; MomoAdvance 13613 auto-deducted on receipt; 36000 withdrawn to cash pocket; 1390 withdrawal fee,transfer
+2026-10-06,James Katana (UHPAB),Payment received,20000,74000,Received via MTN Mobile Money; auto-deducted 13360 to clear MomoAdvance overdraft,transfer

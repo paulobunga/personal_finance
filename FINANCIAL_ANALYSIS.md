@@ -1,27 +1,27 @@
 # Financial Analysis Report — 06 October 2026
 
-> **As of 06 Oct 2026 (Evening)** — All ledgers reconciled. Net worth **−3,245,808 UGX**. Zero cash, MTN in overdraft (−12,503 MomoAdvance), savings protected (72,201). Total liabilities 3,306,503 UGX.
+> **As of 06 Oct 2026 (Final)** — All ledgers reconciled including Feza Kitchen & Grill business obligations. Net worth **−3,654,162 UGX**. MTN balance 4,640; MomoAdvance cleared (limit 14,000 restored). Oct income 74,000. **URGENT: Chef + Waitress salaries 438,000 due 2026-10-10 (4 days).** Total owed liabilities 3,732,000; upcoming obligations (Nov/Dec rent) 800,000.
 
 ---
 
 ## Net Position Summary
-| | 05 Oct | 06 Oct (Morning) | 06 Oct (Evening) |
-|---|---|---|---|
-| Total Assets (UGX) | 78,195 | 74,195 | **60,695** |
-| Total Liabilities (UGX) | 2,974,000 | 3,294,000 | **3,306,503** |
-| Net Worth (UGX) | −2,895,805 | −3,219,805 | **−3,245,808** |
-| Liability-to-Asset Ratio | 38:1 | 44:1 | **54:1** |
+| | 05 Oct | 06 Oct Morning | 06 Oct Evening | 06 Oct Night | 06 Oct Final |
+|---|---|---|---|---|---|
+| Total Assets (UGX) | 78,195 | 74,195 | 60,695 | 77,838 | **77,838** |
+| Total Liabilities (UGX) | 2,974,000 | 3,294,000 | 3,306,503 | 3,294,000 | **3,732,000** |
+| Net Worth (UGX) | −2,895,805 | −3,219,805 | −3,245,808 | −3,216,162 | **−3,654,162** |
+| Liability-to-Asset Ratio | 38:1 | 44:1 | 54:1 | 42:1 | **48:1** |
 
 ---
 
-## Assets (End of Day — 06 Oct)
+## Assets (End of Day — 06 Oct Night)
 | Account | Balance (UGX) | File | Note |
 |---|---|---|---|
-| MTN Mobile Money | −12,503 | `mtn_mobile_money.csv` | MomoAdvance owed; sent 13k to wife + 500 fee; 997 used first; MTN advanced 12,503 |
+| MTN Mobile Money | 4,640 | `mtn_mobile_money.csv` | MomoAdvance fully cleared; received 20k James Katana; data 500 + fee 14; Axieva airtime 2,000 |
 | Cash Pocket | 0 | `cash_account.csv` | Depleted: transport 1k + daughter school transport 3k |
 | Standard Chartered Bank | 997 | `bank_account.csv` | Minimal transactional balance |
-| Xeno Savings | 72,201 | `xeno_savings.csv` | Only meaningful reserve; 119% of liquid assets; protected |
-| **Total Assets** | **60,695** | `summary_account.csv` | |
+| Xeno Savings | 72,201 | `xeno_savings.csv` | Only meaningful reserve; protected |
+| **Total Assets** | **77,838** | `summary_account.csv` | |
 
 ---
 
@@ -39,25 +39,32 @@
 | Club17 | UG Plastic — CLEARED | −7,000 | 824,000 | Cleared | — | Social |
 | Landlord | September Rent | 800,000 | 1,624,000 | Owed | 2026-10-31 | Rent |
 | Landlord | October Rent | 800,000 | 2,424,000 | Owed | 2026-10-31 | Rent |
-| Club17 Management | Sept rent shortfall | 150,000 | 2,574,000 | Owed | 2026-10-31 | Rent |
-| Club17 Management | October rent | 400,000 | 2,974,000 | Owed | 2026-10-31 | Rent |
+| Club17 Management | Feza Kitchen & Grill — Sept rent shortfall | 150,000 | 2,574,000 | Owed | 2026-10-31 | Rent (Business) |
+| Club17 Management | Feza Kitchen & Grill — October rent | 400,000 | 2,974,000 | Owed | 2026-10-31 | Rent (Business) |
 | Maid at home | Salary June–Sept (4 months) | 320,000 | 3,294,000 | Owed | 2026-10-31 | Salary |
-| MTN MomoAdvance | Auto-advance shortfall (06 Oct) | 12,503 | 3,306,503 | Owed | On next receipt | Loan |
+| MTN MomoAdvance | Auto-advance shortfall (06 Oct) | 12,503 | 3,306,503 | **Cleared** | — | Loan |
+| Feza Kitchen & Grill | Chef — October salary | 400,000 | 3,694,000 | Owed | **2026-10-10** | Salary (Business) |
+| Feza Kitchen & Grill | Waitress — Week 1 salary | 38,000 | 3,732,000 | Owed | **2026-10-10** | Salary (Business) |
+| Club17 Management | Feza Kitchen & Grill — November rent | 400,000 | 4,132,000 | Upcoming | 2026-11-30 | Rent (Business) |
+| Club17 Management | Feza Kitchen & Grill — December rent | 400,000 | 4,532,000 | Upcoming | 2026-12-31 | Rent (Business) |
 
-> **Total owed liabilities = 3,306,503 UGX** (net of UG Plastic clearance 7,000)
+> **Total owed liabilities = 3,732,000 UGX** | **Upcoming (not yet owed) = 800,000 UGX**
 
 ---
 
 ## Debt by Category
-| Category | Amount (UGX) | % of Total Debt |
-|---|---|---|
-| Rent (Landlord + Club17 Mgmt) | 2,150,000 | 65.0% |
-| Personal loans (Patricia + Remmy + Ahmed) | 620,000 | 18.8% |
-| Salary (Maid) | 320,000 | 9.7% |
-| School fees (Britney + Beverly) | 195,000 | 5.9% |
-| MomoAdvance (MTN) | 12,503 | 0.4% |
-| Social (Club17 venue) | 9,000 | 0.3% |
-| **Total** | **3,306,503** | |
+| Category | Amount (UGX) | % of Owed Debt | Notes |
+|---|---|---|---|
+| Rent — Home (Landlord) | 1,600,000 | 42.9% | Sept + Oct unpaid; 800k/month recurring |
+| Rent — Business (Feza Kitchen) | 550,000 | 14.7% | Sept shortfall 150k + Oct 400k; 400k/month |
+| Personal loans | 620,000 | 16.6% | Patricia 100k + Remmy 220k + Ahmed 300k |
+| Salary — Business (Chef + Waitress) | 438,000 | 11.7% | **Due 2026-10-10** — Chef 400k + Waitress 38k |
+| Salary — Personal (Maid) | 320,000 | 8.6% | June–Sept 4 months |
+| School fees | 195,000 | 5.2% | Britney 50k + Beverly 145k; **due 2026-10-15** |
+| Social (Club17 venue) | 9,000 | 0.2% | Sodas + Tusker; freeze |
+| **Total Owed** | **3,732,000** | | |
+| Upcoming — Nov rent (Feza) | 400,000 | — | Due 2026-11-30; not yet in net worth |
+| Upcoming — Dec rent (Feza) | 400,000 | — | Due 2026-12-31; not yet in net worth |
 
 ---
 
@@ -65,9 +72,11 @@
 | Date | Source | Description | Amount (UGX) | Category |
 |---|---|---|---|---|
 | 2026-10-05 | Feza Events (U) Ltd | Transport allowance | 2,000 | Transport allowance |
-| **Total (Oct)** | | | **2,000** | |
+| 2026-10-05 | James Katana (UHPAB) | Payment received | 52,000 | Transfer |
+| 2026-10-06 | James Katana (UHPAB) | Payment received | 20,000 | Transfer |
+| **Total (Oct)** | | | **74,000** | |
 
-> Monthly income 2,000 UGX vs liabilities 3,306,503 UGX = **0.06% income coverage**. Income generation is the single highest-leverage action available.
+> Monthly income 74,000 UGX vs liabilities 3,294,000 UGX = **2.25% income coverage**. Still critically insufficient but more accurately reflects actual inflows.
 
 ---
 
@@ -85,27 +94,27 @@
 
 ---
 
-## MomoAdvance Tracker (06 Oct)
+## MomoAdvance Tracker (06 Oct — Night)
 | | UGX |
 |---|---|
 | Limit | 14,000 |
-| Currently owed | 12,503 |
-| **Remaining headroom** | **1,497** |
-| Days since advance | 0 |
+| Currently owed | 0 |
+| **Available headroom** | **14,000** |
+| Days since last advance | 0 |
 
-> Headroom functionally exhausted (1,497 remaining). Clear on next MTN receipt before any new sends.
+> MomoAdvance fully cleared by auto-repayment from James Katana 20,000 receipt. Full limit restored.
 
 ---
 
 ## Key Red Flags
-1. **Net worth −3,245,808 UGX** — liabilities 54× liquid assets; worsening daily
-2. **Cash = 0** — zero buffer; every account either negative, zero, or protected
-3. **MTN blocked** — MomoAdvance 12,503 owed; 1,497 headroom only; cannot send/pay until cleared
-4. **School fees deadline 2026-10-15** — 195,000 owed (Britney 50k + Beverly 145k); 9 days remaining; exclusion risk
-5. **Zero income (06 Oct)** — Oct total 2,000 UGX; structural income deficit; no surplus possible at current rate
-6. **Rent compounding** — 2,150,000 owed; adds ~1,600,000/month if unpaid
-7. **Savings coverage 2.18%** — Xeno 72,201 covers only 2.18% of 3,306,503 liabilities (safe threshold = 10%)
-8. **Liability growth rate** — liabilities grew 332,503 in one day (06 Oct); assets fell 13,500; net worsened 346,003
+1. **Net worth −3,654,162 UGX** — liabilities 48× liquid assets
+2. **URGENT — Staff salaries 438,000 due 2026-10-10 (4 days)** — Chef 400k + Waitress 38k; liquid assets only 5,637 (MTN 4,640 + Bank 997); income event needed immediately
+3. **School fees 195,000 due 2026-10-15 (9 days)** — Britney 50k + Beverly 145k; exclusion risk
+4. **Cash = 0** — zero cash buffer; MTN 4,640 only liquid asset outside protected savings
+5. **Income insufficient** — Oct total 74,000 UGX vs 3,732,000 owed = 2% coverage
+6. **Rent compounding** — home 1,600,000 + business 550,000 = 2,150,000 already owed; home adds 800k/month, business adds 400k/month if unpaid
+7. **Savings coverage 1.93%** — Xeno 72,201 / 3,732,000 = 1.93% (below 2% threshold)
+8. **Upcoming obligations 800,000** — Nov + Dec Feza Kitchen rent not yet in net worth but certain
 
 ---
 

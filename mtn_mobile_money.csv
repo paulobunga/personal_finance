@@ -7,3 +7,10 @@ date,description,debit,credit,balance,note
 2026-10-06,MTN send fee,500,,-500,transaction fee for sending 13000 to wife
 2026-10-06,MomoAdvance auto-covered shortfall,,12503,-12503,MTN advanced 12503 (13500 total - 997 available = 12503 owed to MTN)
 2026-10-06,MomoAdvance limit,0,0,-12503,MomoAdvance limit set at 14000 UGX as of 06 Oct 2026
+2026-10-06,MTN Data purchase,500,,-13003,bought MTN mobile data 500 via MomoAdvance
+2026-10-06,MomoAdvance fee (data purchase),14,,-13017,MomoAdvance access fee for 500 data bundle
+2026-10-06,Received from James Katana (UHPAB),,20000,6983,income received - James Katana UHPAB
+2026-10-06,MomoAdvance auto-repayment (overdraft cleared),13360,,6983,auto-deducted 13360 to clear full overdraft (12503 advance + 514 data advance + 343 fees); balance after repayment shown above
+2026-10-06,Received from James Katana (net post-repayment),,0,6640,balance after 13360 overdraft auto-deduction from 20000 receipt
+2026-10-06,Axieva Uganda Limited - Airtel airtime,2000,,4640,cross-network airtime purchase for Airtel line via Axieva
+2026-10-06,MomoAdvance limit restored,0,0,4640,MomoAdvance fully cleared by auto-repayment; limit restored to 14000 UGX
