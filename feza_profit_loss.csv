@@ -1,0 +1,4 @@
+date,total_sales_ugx,total_expenses_ugx,gross_profit_ugx,kitchen_rent_ugx,chef_salary_ugx,waitress_salary_ugx,net_profit_ugx,note
+2026-09-10,47000,27500,19500,,,, 19500,First day of trading; kitchen rent and staff costs tracked separately in liabilities.csv
+2026-09-11,62000,65500,-3500,,,,,-3500,LOSS DAY — expenses exceeded sales by 3500; high ingredient cost (chapatis 10k + 2 chickens 31k = 63% of expenses); new menu items introduced (Chapati & Beef)
+2026-09-12,90000,50000,40000,,,,,40000,Strong day — 15 sales; new items performing (Boiled Goat 15k; Chapati & Beef 10k); cost-to-sales ratio 55.6%; toothpicks added as supplies

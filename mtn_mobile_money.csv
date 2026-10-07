@@ -14,3 +14,4 @@ date,description,debit,credit,balance,note
 2026-10-06,Received from James Katana (net post-repayment),,0,6640,balance after 13360 overdraft auto-deduction from 20000 receipt
 2026-10-06,Axieva Uganda Limited - Airtel airtime,2000,,4640,cross-network airtime purchase for Airtel line via Axieva
 2026-10-06,MomoAdvance limit restored,0,0,4640,MomoAdvance fully cleared by auto-repayment; limit restored to 14000 UGX
+2026-10-06,Sent to Peter Aturinda (merchant code - soda + transport),4000,,640,paid 4000 to Peter Aturinda via merchant code; no fee (merchant payment); 2000 soda clearance + 2000 transport cash

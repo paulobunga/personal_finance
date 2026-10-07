@@ -13,7 +13,7 @@ Each `.csv` file is one account ledger:
 - `xeno_savings.csv` — Xeno Savings (asset)
 - `liabilities.csv` — All debts (liability; running balance increases with new debt, decreases with clearance)
 - `income.csv` — Income sources (revenue)
-- `summary_account.csv` — Combined net worth statement
+- `summary_account.csv` — Combined net worth statement (Paul Obunga — personal finances)
 
 ## Double-entry rules
 - Every transaction touches at least two accounts.

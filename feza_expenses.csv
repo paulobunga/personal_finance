@@ -1,0 +1,256 @@
+date,item,amount_ugx,category,note
+2026-09-10,Chicken,17000,ingredient,1 chicken @ 17000; 4 pieces yielded
+2026-09-10,Matooke,1000,ingredient,
+2026-09-10,Irish Potatoes,3000,ingredient,
+2026-09-10,Coriander,500,ingredient,
+2026-09-10,Transport,6000,transport,ingredient transport / delivery
+2026-09-11,Chapatis,10000,ingredient,ready-made chapatis purchased (qty unknown)
+2026-09-11,Royco Beef Spice,1000,ingredient,
+2026-09-11,Royco Beef Cubes,1000,ingredient,
+2026-09-11,Salt,1000,ingredient,
+2026-09-11,Transport,5000,transport,
+2026-09-11,Irish Potatoes,5000,ingredient,second purchase
+2026-09-11,Green Pepper,500,ingredient,
+2026-09-11,Tomatoes,3000,ingredient,
+2026-09-11,Irish Potatoes,5000,ingredient,first purchase
+2026-09-11,Matooke,2000,ingredient,
+2026-09-11,Chicken (x2),31000,ingredient,2 chickens @ ~15500 avg; 8 pieces yielded
+2026-09-11,Carrots,500,ingredient,
+2026-09-12,Toothpicks,4000,supplies,
+2026-09-12,Coriander,1000,ingredient,
+2026-09-12,Matooke,2000,ingredient,
+2026-09-12,Transport,4000,transport,
+2026-09-12,Carrots,1000,ingredient,
+2026-09-12,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-09-12,Irish Potatoes,10000,ingredient,
+2026-09-12,Chicken,17000,ingredient,1 chicken @ 17000; 4 pieces yielded
+2026-09-12,Green Pepper,1000,ingredient,
+2026-09-13,Royco Beef Spice,400,ingredient,
+2026-09-13,Goat Meat,11000,ingredient,0.5 kg @ ~22000-24000 UGX/kg; yields 3 servings
+2026-09-13,Green Pepper,1000,ingredient,
+2026-09-13,Carrots,1000,ingredient,
+2026-09-13,Cooking Oil,9000,ingredient,1 litre @ 9000 UGX
+2026-09-13,Charcoal,3000,supplies,cooking fuel
+2026-09-13,Chapati Guy (Wages),5000,labour,casual wages for chapati making
+2026-09-13,Irish Potatoes,5000,ingredient,
+2026-09-13,Garlic,500,ingredient,
+2026-09-13,Matooke,2000,ingredient,
+2026-09-13,Transport,2000,transport,
+2026-09-13,Paul (Facilitation),5000,labour,casual facilitation cost
+2026-09-13,Tomatoes,3000,ingredient,
+2026-09-13,Chicken,17000,ingredient,1 chicken @ 17000; 4 pieces yielded
+2026-09-13,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-09-14,Goat Meat,11000,ingredient,0.5 kg @ ~22000-24000 UGX/kg; yields 3 servings
+2026-09-14,Transport,6000,transport,
+2026-09-14,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-09-14,Green Pepper,1000,ingredient,
+2026-09-14,Carrots,1000,ingredient,
+2026-09-14,Chapati Guy (Wages),5000,labour,casual wages for chapati making
+2026-09-14,Onions,3000,ingredient,
+2026-09-14,Matooke,3000,ingredient,
+2026-09-14,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-09-14,Chicken (x2),34000,ingredient,2 chickens @ 17000 each; 8 pieces yielded
+2026-09-14,Tomatoes,3000,ingredient,
+2026-09-15,Cooking Oil,8500,ingredient,1 litre @ 8500 UGX
+2026-09-15,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-09-15,Salt,1000,ingredient,
+2026-09-15,Carrots,1000,ingredient,
+2026-09-15,Matooke,2000,ingredient,
+2026-09-15,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-09-15,Transport,4000,transport,
+2026-09-15,Irish Potatoes,3000,ingredient,
+2026-09-16,Tomato Sauce,1000,ingredient,
+2026-09-16,Irish Potatoes,10000,ingredient,
+2026-09-16,Chicken,16000,ingredient,1 chicken @ 16000; 4 pieces yielded
+2026-09-16,Tomatoes,2000,ingredient,
+2026-09-16,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-09-17,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-09-17,Chicken,16500,ingredient,1 chicken @ 16500; 4 pieces yielded
+2026-09-17,Chapati,3000,ingredient,ready-made chapatis purchased (qty unknown)
+2026-09-17,Staff Transport,1000,transport,staff transport cost
+2026-09-17,Royco Beef Spice,1000,ingredient,
+2026-09-17,Cooking Oil,8500,ingredient,1 litre @ 8500 UGX
+2026-09-17,Onions,3000,ingredient,
+2026-09-17,Tomatoes,3000,ingredient,
+2026-09-17,Matooke,2000,ingredient,
+2026-09-17,Irish Potatoes,5000,ingredient,
+2026-09-17,Ginger,1000,ingredient,
+2026-09-18,Carrots,1000,ingredient,
+2026-09-18,Green Pepper,1000,ingredient,
+2026-09-18,Goat Meat,11000,ingredient,0.5 kg @ ~22000-24000 UGX/kg; yields 3 servings
+2026-09-18,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-09-18,Matooke,2000,ingredient,
+2026-09-18,Irish Potatoes,10000,ingredient,
+2026-09-18,Transport,6000,transport,
+2026-09-18,Cooking Oil,8500,ingredient,1 litre @ 8500 UGX
+2026-09-18,Chicken (x2),34000,ingredient,2 chickens @ 17000 each; 8 pieces yielded
+2026-09-18,Tomatoes,3000,ingredient,
+2026-09-19,Goat Meat,11000,ingredient,0.5 kg @ ~22000-24000 UGX/kg; yields 3 servings
+2026-09-19,Coriander,500,ingredient,
+2026-09-19,Matooke,1000,ingredient,
+2026-09-19,Transport,6000,transport,
+2026-09-19,Chilli,1000,ingredient,
+2026-09-19,Eggs,13000,ingredient,
+2026-09-19,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-09-19,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-09-19,Wire Mesh,3000,supplies,kitchen equipment
+2026-09-20,Salt,1000,ingredient,
+2026-09-20,William (Wages),5000,labour,casual wages
+2026-09-20,Charcoal,4000,supplies,cooking fuel
+2026-09-20,Carrots,1000,ingredient,
+2026-09-20,Tomato Sauce,1000,ingredient,
+2026-09-20,Irish Potatoes,10000,ingredient,
+2026-09-20,Cooking Oil,4000,ingredient,0.5 litre @ 4000 UGX
+2026-09-20,Chicken,16000,ingredient,1 chicken @ 16000; 4 pieces yielded
+2026-09-20,Matooke,2000,ingredient,
+2026-09-21,Cooking Oil,8500,ingredient,1 litre @ 8500 UGX
+2026-09-21,William (Wages),5000,labour,casual wages
+2026-09-21,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-09-21,Transport,5000,transport,
+2026-09-21,Green Pepper,1000,ingredient,
+2026-09-21,Matooke,2000,ingredient,
+2026-09-21,Tomatoes,3000,ingredient,
+2026-09-21,Goat Meat,11000,ingredient,0.5 kg @ ~22000-24000 UGX/kg; yields 3 servings
+2026-09-21,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-09-21,Charcoal,4000,supplies,cooking fuel
+2026-09-21,Onions,3000,ingredient,
+2026-09-21,Chicken,16500,ingredient,1 chicken @ 16500; 4 pieces yielded
+2026-09-22,Chicken,15500,ingredient,1 chicken @ 15500; 4 pieces yielded
+2026-09-22,Coriander,1000,ingredient,
+2026-09-22,Garlic,1000,ingredient,
+2026-09-22,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-09-22,Charcoal,2000,supplies,cooking fuel
+2026-09-22,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-09-22,Matooke,2000,ingredient,
+2026-09-22,Carrots,1000,ingredient,
+2026-09-22,Ginger,1000,ingredient,
+2026-09-22,Transport,4000,transport,
+2026-09-23,Salt,1000,ingredient,
+2026-09-23,Royco Beef Spice,1000,ingredient,
+2026-09-23,Charcoal,4000,supplies,cooking fuel
+2026-09-23,Tomatoes,1000,ingredient,
+2026-09-23,Transport,1000,transport,
+2026-09-23,Cooking Oil,4000,ingredient,0.5 litre @ 4000 UGX
+2026-09-23,Cassava,2000,ingredient,
+2026-09-23,Chicken,16000,ingredient,1 chicken @ 16000; 4 pieces yielded
+2026-09-23,Kigere,15000,ingredient,~6-7 pieces (priced by size); sold by piece not weight
+2026-09-23,Matooke,2000,ingredient,
+2026-09-24,Tomatoes,3000,ingredient,
+2026-09-24,Charcoal,7000,supplies,cooking fuel
+2026-09-24,Matooke,2000,ingredient,
+2026-09-24,Chicken,17000,ingredient,1 chicken @ 17000; 4 pieces yielded
+2026-09-24,Kigere,10000,ingredient,4-5 pieces (priced by size); sold by piece not weight
+2026-09-24,Transport,2000,transport,
+2026-09-24,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-09-24,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-09-24,Cassava,3000,ingredient,
+2026-09-24,Royco Beef Cubes,1000,ingredient,
+2026-09-25,Chicken,14000,ingredient,1 chicken @ 14000; 4 pieces yielded
+2026-09-25,Onions,2000,ingredient,
+2026-09-25,Goat Meat,11000,ingredient,0.5 kg @ ~22000-24000 UGX/kg; yields 3 servings
+2026-09-25,Muzafaru (Wages),5000,labour,casual wages
+2026-09-25,Charcoal,4000,supplies,cooking fuel
+2026-09-25,Irish Potatoes,5000,ingredient,
+2026-09-25,Coriander,1000,ingredient,
+2026-09-25,Transport,1000,transport,
+2026-09-26,Royco,1000,ingredient,
+2026-09-26,Cassava,3000,ingredient,
+2026-09-26,Cooking Oil,8000,ingredient,1 litre @ 8000 UGX
+2026-09-26,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-09-26,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-09-26,Tomatoes,3000,ingredient,
+2026-09-26,Charcoal,6000,supplies,cooking fuel
+2026-09-26,Salt,1000,ingredient,
+2026-09-26,Kigere,12000,ingredient,6 pieces (priced by size); sold by piece not weight
+2026-09-26,Chicken,17000,ingredient,1 chicken @ 17000; 4 pieces yielded
+2026-09-27,Milk,2000,ingredient,for tea/beverages
+2026-09-27,Transport,6000,transport,
+2026-09-27,Charcoal,4000,supplies,cooking fuel
+2026-09-27,Cooking Oil,4000,ingredient,0.5 litre @ 4000 UGX
+2026-09-27,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-09-27,Chicken,17000,ingredient,1 chicken @ 17000; 4 pieces yielded
+2026-09-27,Matooke,2000,ingredient,
+2026-09-28,Chicken,17000,ingredient,1 chicken @ 17000; 4 pieces yielded
+2026-09-28,Kigere,15000,ingredient,~6-7 pieces (priced by size); sold by piece not weight
+2026-09-28,Matooke,3000,ingredient,
+2026-09-28,Cassava,3000,ingredient,
+2026-09-28,Charcoal,9000,supplies,cooking fuel
+2026-09-28,Transport,3000,transport,
+2026-09-29,Transport,3000,transport,
+2026-09-29,Lunch Allowance,2000,labour,staff lunch allowance
+2026-09-29,Chicken,15000,ingredient,1 chicken @ 15000; 4 pieces yielded
+2026-09-29,Charcoal,3000,supplies,cooking fuel
+2026-09-29,Tomatoes,2000,ingredient,
+2026-09-29,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-09-29,Matooke,2000,ingredient,
+2026-09-29,Irish Potatoes,5000,ingredient,
+2026-09-30,Onions,3000,ingredient,first purchase
+2026-09-30,Carrots,1000,ingredient,
+2026-09-30,Lunch,5000,labour,staff lunch/welfare
+2026-09-30,Chicken,17000,ingredient,1 chicken @ 17000; 4 pieces yielded
+2026-09-30,Charcoal,4000,supplies,cooking fuel
+2026-09-30,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg - second purchase
+2026-09-30,Silver Plates (x4),2000,supplies,kitchen equipment
+2026-09-30,Green Pepper,1000,ingredient,
+2026-09-30,Onions,3000,ingredient,second purchase
+2026-09-30,Coriander,1000,ingredient,
+2026-09-30,Matooke,2000,ingredient,
+2026-09-30,Transport,3000,transport,
+2026-09-30,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg - first purchase
+2026-10-01,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-10-01,Kigere,12000,ingredient,6 pieces (priced by size); sold by piece not weight
+2026-10-01,Food (Staff),5000,labour,staff meal/welfare
+2026-10-01,Cassava,3000,ingredient,
+2026-10-01,Charcoal,7000,supplies,cooking fuel
+2026-10-01,Green Pepper,1000,ingredient,
+2026-10-01,Matooke,2000,ingredient,
+2026-10-01,Tomatoes,1000,ingredient,
+2026-10-01,Cooking Oil,4000,ingredient,0.5 litre @ 4000 UGX
+2026-10-01,Transport,4000,transport,
+2026-10-01,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-10-02,Charcoal,4000,supplies,cooking fuel
+2026-10-02,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-10-02,Matooke,2000,ingredient,
+2026-10-02,Tomatoes,3000,ingredient,
+2026-10-02,Chicken,16000,ingredient,1 chicken @ 16000; 4 pieces yielded
+2026-10-02,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-10-02,Cooking Oil,8000,ingredient,1 litre @ 8000 UGX
+2026-10-02,Eggs,13000,ingredient,
+2026-10-02,Transport,4000,transport,
+2026-10-02,Prestige,4500,supplies,cleaning/washing supplies
+2026-10-02,Irish Potatoes,5000,ingredient,
+2026-10-02,Royco Beef Spice,1000,ingredient,
+2026-10-03,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-10-03,Transport,4000,transport,
+2026-10-03,Charcoal,4000,supplies,cooking fuel
+2026-10-03,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-10-04,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-10-04,Chicken,16000,ingredient,1 chicken @ 16000; 4 pieces yielded
+2026-10-04,Charcoal,5000,supplies,cooking fuel
+2026-10-04,Tomatoes,5000,ingredient,
+2026-10-04,Carrots,1000,ingredient,
+2026-10-04,Transport,4000,transport,
+2026-10-04,Royco Beef Cubes,1000,ingredient,
+2026-10-04,Chapati Guy (Wages),5000,labour,casual wages for chapati making
+2026-10-04,Salt,1000,ingredient,
+2026-10-04,Cooking Oil,4000,ingredient,0.5 litre @ 4000 UGX
+2026-10-04,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-10-04,Royco Beef Spice,1000,ingredient,
+2026-10-05,Charcoal,5000,supplies,cooking fuel
+2026-10-05,Chicken,14000,ingredient,1 chicken @ 14000; 4 pieces yielded
+2026-10-05,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-10-05,Transport,2000,transport,
+2026-10-06,Transport,4000,transport,
+2026-10-06,Charcoal,4000,supplies,cooking fuel
+2026-10-06,Eggs,13000,ingredient,
+2026-10-06,Wheat Flour,7000,ingredient,2kg pack @ 7000; yields 20 chapatis
+2026-10-06,Cooking Oil,8000,ingredient,1 litre @ 8000 UGX
+2026-10-06,Beef,10000,ingredient,0.5 kg @ 20000 UGX/kg
+2026-10-06,Lunch Allowance (Staff),3000,labour,staff lunch allowance
+2026-10-06,Serviettes,2500,supplies,
+2026-10-06,Polythene Bags,300,supplies,packaging
+2026-10-06,Royco Cubes,1000,ingredient,
+2026-10-06,Onions,1000,ingredient,
+2026-10-06,Soda,1000,supplies,for Paul Obunga (boss)
+2026-10-06,Carrots,1000,ingredient,
+2026-10-06,Tomatoes,3000,ingredient,

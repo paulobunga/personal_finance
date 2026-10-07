@@ -1,4 +1,5 @@
 # Financial Analysis Report — 06 October 2026
+**Account Holder: Paul Obunga**
 
 > **As of 06 Oct 2026 (Final)** — All ledgers reconciled including Feza Kitchen & Grill business obligations. Net worth **−3,654,162 UGX**. MTN balance 4,640; MomoAdvance cleared (limit 14,000 restored). Oct income 74,000. **URGENT: Chef + Waitress salaries 438,000 due 2026-10-10 (4 days).** Total owed liabilities 3,732,000; upcoming obligations (Nov/Dec rent) 800,000.
 
@@ -161,46 +162,54 @@
 ---
 
 ## Debt Repayment Priority
-1. **MTN MomoAdvance 12,503** — clear on next MTN receipt; restores mobile money; only 1,497 headroom remains
-2. **School fees 195,000** — due 2026-10-15 (9 days); Britney 50k + Beverly 145k; partial payment from any income first
-3. **Maid salary 320,000** — ethical salary obligation; June–Sept; negotiate payment plan
-4. **Landlord rent 1,600,000** — eviction risk; negotiate part-payment; propose 200k–300k per month
-5. **Club17 social 9,000** — freeze all new social spending; small amount but symptomatic
-6. **Personal loans 620,000** — Patricia + Remmy + Ahmed; negotiate formal restructuring with written terms
-7. **Club17 Management rent 550,000** — venue contract risk; negotiate alongside landlord
+1. **Chef salary 400,000 + Waitress 38,000 = 438,000** — due 2026-10-10 (4 days); business staff; ethical obligation
+2. **School fees 195,000** — due 2026-10-15 (9 days); Britney 50k + Beverly 145k; child access risk
+3. **MTN MomoAdvance** — cleared ✓; limit restored to 14,000; monitor going forward
+4. **Maid salary 320,000** — personal staff; June–Sept arrears; negotiate payment plan
+5. **Landlord home rent 1,600,000** — eviction risk; negotiate part-payment (200k–300k/month)
+6. **Feza Kitchen rent 550,000** — business rent shortfall 150k + Oct 400k; negotiate alongside staff payments
+7. **Club17 social 9,000** — freeze all new social spending
+8. **Personal loans 620,000** — Patricia + Remmy + Ahmed; negotiate formal restructuring
 
 ---
 
 ## Recommendations
 
-### Immediate (0–7 days)
-1. Clear MomoAdvance 12,503 on next MTN receipt — restores mobile money channel
-2. Seek any income event; prioritise school fee contribution before 15 Oct
-3. Freeze Club17 social spending (Sodas 4k + Tusker 5k still owed)
+### Immediate (0–4 days — before 2026-10-10)
+1. Secure income event to cover staff salaries (438,000 minimum needed by 10 Oct)
+2. Do not use Xeno for staff salaries without explicit justification — savings at 1.93% of liabilities
+3. MomoAdvance limit 14,000 fully available — use only for essential shortfalls
 
-### Short-term (1–4 weeks)
-4. Negotiate landlord — propose part-payment (200k–300k) to stop monthly compounding
-5. Formalise maid salary repayment plan — even 50k/month shows intent
-6. Clarify personal loan repayment terms (Patricia, Remmy, Ahmed) — written agreement to protect relationships
+### Short-term (4–9 days — before 2026-10-15)
+4. Partial payment toward school fees (195,000) — even 50,000 reduces exclusion risk
+5. Notify Britney and Beverly schools of payment intention
 
-### Medium-term (1–3 months)
-7. Use `cash_account.csv` category data to cap social + expense categories < 10% of any cash inflow
-8. Target at least one income source generating 100,000+ UGX/month
-9. Do not touch Xeno savings until monthly income exceeds 50,000 UGX
+### Medium-term (1–4 weeks)
+6. Negotiate landlord — propose 200k–300k part-payment to slow monthly compounding
+7. Negotiate Feza Kitchen rent with Club17 Management alongside staff salary discussion
+8. Formalise personal loan repayment terms (Patricia, Remmy, Ahmed)
 
-### Long-term (3+ months)
-10. Target Debt-to-Asset ratio < 5:1 (currently 54:1)
-11. Rebuild Xeno to 10%+ of remaining liabilities once debt falls below 1,000,000 UGX
+### Long-term (1–3 months)
+9. Build Feza Kitchen & Grill revenue to cover: kitchen rent 400k + Chef 400k + Waitress ~152k = **952,000/month** minimum operating cost
+10. Target income > 1,500,000/month to service business costs + begin debt reduction
+11. Rebuild Xeno savings to 10%+ of liabilities once monthly surplus established
 
 ---
 
 ## Ledger Files Reference
 | File | Purpose | Key Balance |
 |---|---|---|
-| `mtn_mobile_money.csv` | MTN account | −12,503 (MomoAdvance owed) |
+| `mtn_mobile_money.csv` | MTN account | 4,640 (MomoAdvance cleared) |
 | `cash_account.csv` | Cash pocket | 0 |
 | `bank_account.csv` | Standard Chartered | 997 |
 | `xeno_savings.csv` | Savings reserve | 72,201 (protected) |
+| `income.csv` | Income ledger | 74,000 (Oct total) |
+| `liabilities.csv` | All debts | 3,732,000 owed; 800,000 upcoming |
+| `summary_account.csv` | Net worth | −3,654,162 |
+| `planned_expenses.csv` | Planned purchases | 10 items; 11,320,000 total target |
+| `savings_goals.csv` | Savings goals (Xeno-linked) | 72,201 saved toward MacBook Air |
+| `financial_analysis/2026_10_05.md` | Daily snapshot 05 Oct | Net −2,895,805 |
+| `financial_analysis/2026_10_06.md` | Daily snapshot 06 Oct | Net −3,654,162 (final) |
 | `income.csv` | Income ledger | 2,000 (Oct total) |
 | `liabilities.csv` | All debts | 3,306,503 (running balance) |
 | `summary_account.csv` | Net worth | −3,245,808 |

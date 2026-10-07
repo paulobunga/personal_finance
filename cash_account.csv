@@ -13,3 +13,4 @@ date,description,debit,credit,balance,note,category
 2026-10-05,UG Plastic debt clearance (Club17),7000,,4000,paid from cash - debt cleared,debt_clearance
 2026-10-06,Transport to Home (Club17 to home),1000,,3000,transport expense morning 6 Oct,transport
 2026-10-06,Given to daughter for school transport,3000,,0,gave remaining cash to daughter for school transport,transport
+2026-10-06,Received transport cash from MTN (Peter Aturinda payment portion),0,2000,2000,2,000 of 4,000 merchant payment withdrawn as physical transport cash for daughter; no fee (merchant code),transport

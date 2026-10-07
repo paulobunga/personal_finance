@@ -1,6 +1,6 @@
 ---
 name: financial-analysis
-description: Daily financial analysis routine: read all ledgers, detect changes since last .md snapshot, create YYYY_MM_DD.md, update summary_account.csv, update FINANCIAL_ANALYSIS.md master report, and flag red flags.
+description: "Daily financial analysis routine: read all ledgers, detect changes since last .md snapshot, create YYYY_MM_DD.md, update summary_account.csv, update FINANCIAL_ANALYSIS.md master report, and flag red flags."
 ---
 
 # Financial analysis

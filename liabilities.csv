@@ -19,3 +19,4 @@ date,creditor,description,amount,credit,balance,status,due_date,category
 2026-10-06,Club17 Management,Feza Kitchen & Grill - December rent (upcoming),400000,400000,4094000,upcoming,2026-12-31,rent_business
 2026-10-06,Feza Kitchen & Grill,Chef - October salary (due end of week),400000,400000,4494000,owed,2026-10-10,salary_business
 2026-10-06,Feza Kitchen & Grill,Waitress - Week 1 salary (due end of week),38000,38000,4532000,owed,2026-10-10,salary_business
+2026-10-06,Peter Aturinda,Social debt clearance - soda (paid via MTN merchant code),-2000,-2000,4530000,paid in full,,social
