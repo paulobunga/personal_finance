@@ -1,15 +1,21 @@
 # AGENTS.md — Financial Ledger Agents
+**Account Holder: Paul Obunga**
 
 ## Files (Root)
 - `mtn_mobile_money.csv` — MTN balance, MomoAdvance debt, withdrawals, fees
 - `cash_account.csv` — Cash flow (receipts, food, health, venue, transport, airtime); includes `category` column
 - `bank_account.csv` — Standard Chartered Main Branch
 - `xeno_savings.csv` — Savings reserve (Xeno)
-- `income.csv` — Income ledger (canonical source for all income; categories: transport_allowance, salary, business, transfer, other)
+- `income.csv` — Income ledger (canonical source for all personal income; categories: transport_allowance, salary, business, transfer, other); Feza Kitchen & Grill profit withdrawals recorded here as category=business
 - `liabilities.csv` — Running debt (all personal + business obligations); includes `due_date` and `category` columns
 - `summary_account.csv` — Combined assets/liabilities/net worth
 - `planned_expenses.csv` — Planned freelancing equipment purchases (priority-ordered; linked to savings goals)
 - `savings_goals.csv` — Savings goals linked to Xeno; tracks target, saved, and remaining per item
+
+## Business Ledger — Feza Kitchen & Grill
+- `feza_sales.csv` — Itemized daily sales (one row per transaction; columns: date, item, quantity, unit_price_ugx, total_ugx, category, note)
+- `feza_expenses.csv` — Daily ingredient and operating costs (one row per item; columns: date, item, amount_ugx, category, note)
+- `feza_profit_loss.csv` — Daily P&L summary (gross profit = sales − expenses; net profit = gross − rent − staff)
 
 ## Financial Analysis Folder
 - `financial_analysis/AGENT.md` — Workflow rules (read all ledgers → create dated .md → update summary → protect savings)
@@ -17,7 +23,7 @@
 - `FINANCIAL_ANALYSIS.md` — Master analysis report (latest full review)
 
 ## Business Context — Feza Kitchen & Grill
-- **Business**: Feza Kitchen & Grill — food/catering business operated by the account holder
+- **Business**: Feza Kitchen & Grill — food/catering business operated by **Paul Obunga**
 - **Venue**: Kitchen space rented from Club17 Management at 450,000 UGX/month (Sept rate); 400,000 UGX/month from Oct onwards
 - **Staff**:
   - Chef — 400,000 UGX/month; salary due end of each week completing a full month
@@ -56,8 +62,7 @@
 - `rent-obligation-tracker` — recurring rent forecasting (personal + business)
 - `forecasting-calculations` — ratios, projections, scenario modeling
 - `income-tracker` — income monitoring and gap detection
-- `momo-advance-tracker` — MomoAdvance limit, owed amount, and remaining headroom
-- `savings-goals-tracker` — savings goals progress, Xeno allocation, and purchase readiness (pending creation)
+- `feza-business-tracker` — Feza Kitchen & Grill daily sales, expenses, P&L, break-even analysis
 
 ## Rules (from financial_analysis/AGENT.md)
 - Transaction dates = file dates (5 Oct = 2026_10_05.md)
