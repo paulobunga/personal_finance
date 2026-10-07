@@ -1,49 +1,128 @@
 ---
 name: double-entry-accounting
-description: Double-entry bookkeeping with paired debit/credit entries, running balances per account, and a combined net-worth summary. Use when recording transactions across MTN, Cash, Bank, Savings, and Liabilities ledgers.
+description: Record financial transactions as paired journal entries in the SQLite database. Every transaction debits one account and credits another. Use when recording any movement of money across personal or business accounts.
 ---
 
 # Double-entry accounting
 
-## Account map
-Each `.csv` file is one account ledger:
-- `mtn_mobile_money.csv` — MTN Mobile Money (asset)
-- `cash_account.csv` — Cash Pocket (asset)
-- `bank_account.csv` — Standard Chartered Bank (asset)
-- `xeno_savings.csv` — Xeno Savings (asset)
-- `liabilities.csv` — All debts (liability; running balance increases with new debt, decreases with clearance)
-- `income.csv` — Income sources (revenue)
-- `summary_account.csv` — Combined net worth statement (Paul Obunga — personal finances)
+## Database
+All data lives in `financial.db`. Use `db_manager.py` for all reads and writes.
+
+## Chart of accounts (account codes)
+
+### Personal — Assets (normal balance: debit)
+| Code | Name |
+|------|------|
+| 101  | Cash Account |
+| 102  | Standard Chartered Bank |
+| 103  | MTN Mobile Money |
+| 104  | Xeno Savings |
+
+### Business — Assets (normal balance: debit)
+| Code | Name |
+|------|------|
+| 201  | Business Cash |
+| 202  | Business Equipment |
+| 203  | Inventory |
+
+### Personal — Liabilities (normal balance: credit)
+| Code | Name |
+|------|------|
+| 301  | Personal Loans |
+| 302  | Credit Cards |
+| 303  | MomoAdvance |
+
+### Business — Liabilities (normal balance: credit)
+| Code | Name |
+|------|------|
+| 401  | Accounts Payable |
+| 402  | Business Loans |
+
+### Equity (normal balance: credit)
+| Code | Name |
+|------|------|
+| 501  | Owner's Capital |
+| 502  | Retained Earnings |
+| 503  | Business Capital |
+
+### Business — Revenue (normal balance: credit)
+| Code | Name |
+|------|------|
+| 601  | Feza Sales |
+| 602  | Business Income |
+
+### Personal — Revenue (normal balance: credit)
+| Code | Name |
+|------|------|
+| 651  | Personal Income |
+| 652  | Transfer Income |
+
+### Business — Expenses (normal balance: debit)
+| Code | Name |
+|------|------|
+| 701  | Cost of Goods Sold |
+| 702  | Rent Expense |
+| 703  | Salaries Expense |
+| 704  | Utilities Expense |
+| 705  | Transport Expense |
+
+### Personal — Expenses (normal balance: debit)
+| Code | Name |
+|------|------|
+| 751  | Food Expense |
+| 752  | Transport Expense |
+| 753  | Health Expense |
+| 754  | Education Expense |
+| 755  | Misc Expense |
 
 ## Double-entry rules
-- Every transaction touches at least two accounts.
-- Asset accounts: debit = increase, credit = decrease.
-- Liability accounts: credit = increase (new debt), debit = decrease (clearance).
 
-**Example — cash withdrawal from MTN:**
-- Credit `mtn_mobile_money.csv` (MTN balance decreases; debit column entry)
-- Debit `cash_account.csv` (cash increases; credit column entry)
+- Assets: debit = increase, credit = decrease
+- Liabilities: credit = increase (new debt), debit = decrease (clearance)
+- Revenue: credit = increase
+- Expenses: debit = increase
+- Every journal must balance: total debits = total credits
 
-**Example — new debt recorded (no cash moved yet):**
-- Credit `liabilities.csv` (liability increases; new row with updated running balance)
-- No asset entry until cash is actually paid out
+## Recording a transaction
 
-**Example — debt clearance paid from cash:**
-- Debit `liabilities.csv` (clearance row; running balance decreases by cleared amount)
-- Credit `cash_account.csv` (cash decreases; debit column entry)
+```python
+from db_manager import get_db_connection, record_transaction
 
-**Example — income received:**
-- Debit `cash_account.csv` or asset account (asset increases; credit column entry)
-- Record in `income.csv` (canonical income record)
+conn = get_db_connection()
 
-## Running balance rule
-- Each row in every `.csv` must have a `balance` value = previous row's `balance` ± this transaction.
-- `liabilities.csv` last row `balance` must equal `summary_account.csv` latest `Total_Liabilities`.
-- `summary_account.csv` `Net_Worth` = `Total_Assets` − `Total_Liabilities`.
+# Cash withdrawal from MTN
+# MTN decreases (credit 103), Cash increases (debit 101)
+record_transaction(conn, '2026-10-07', '101', '103', 36000, 'Withdrawal from MTN to cash')
 
-## Verification procedure per session
-1. Read last `balance` row from each asset `.csv` (`mtn_mobile_money`, `cash_account`, `bank_account`, `xeno_savings`); sum = `Total_Assets`.
-2. Read last `balance` row from `liabilities.csv` = `Total_Liabilities`.
-3. Compute Net Worth = Total_Assets − Total_Liabilities.
-4. Compare to `summary_account.csv` latest row — all three values must match.
-5. If mismatch: re-trace running balances row by row in the mismatched file to find the break.
+conn.commit()
+conn.close()
+```
+
+## Common transaction patterns
+
+| Event | Debit | Credit |
+|-------|-------|--------|
+| Income received to MTN | 103 | 651 |
+| MTN withdrawal to cash | 101 | 103 |
+| Cash expense (food) | 751 | 101 |
+| Cash expense (transport) | 752 | 101 |
+| New personal debt recorded | 755 | 301 |
+| Debt cleared from cash | 301 | 101 |
+| MomoAdvance taken | 303 | 103 |
+| MomoAdvance cleared | 103 | 303 |
+| Feza sale (cash) | 101 | 601 |
+| Feza ingredient purchase | 701 | 201 |
+| Business rent due | 702 | 401 |
+| Chef salary due | 703 | 401 |
+
+## Verification
+
+```python
+from db_manager import get_db_connection, verify_double_entry
+
+conn = get_db_connection()
+result = verify_double_entry(conn)
+print(f"Balanced: {result['balanced']}")
+print(f"Unbalanced journals: {result['unbalanced_count']}")
+conn.close()
+```

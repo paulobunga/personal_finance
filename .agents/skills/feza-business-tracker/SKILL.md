@@ -1,96 +1,107 @@
 ---
 name: feza-business-tracker
-description: Track Feza Kitchen & Grill daily sales, expenses, and profit/loss. Use when recording new sales or purchases, computing daily/weekly/monthly P&L, analyzing best-selling items, flagging loss days, and projecting whether business revenue covers operating costs (rent + staff).
+description: Track Feza Kitchen & Grill daily sales, expenses, and profit/loss using the SQLite database. Use when recording new sales or purchases, computing daily/weekly/monthly P&L, analyzing best-selling items, flagging loss days, and projecting whether business revenue covers operating costs.
 ---
 
 # Feza Kitchen & Grill — Business Tracker
 
-## Files
-- `feza_sales.csv` — itemized sales (one row per sale transaction)
-- `feza_expenses.csv` — daily ingredient and operating costs (one row per expense item)
-- `feza_profit_loss.csv` — daily P&L summary (one row per trading day)
+## Database
+All data lives in `financial.db`. Business accounts:
 
-## Schemas
-
-### feza_sales.csv
-`date, item, quantity, unit_price_ugx, total_ugx, category, note`
-- `date` — transaction date (YYYY-MM-DD)
-- `item` — menu item name (e.g. Boiled Chicken, Chips & Salad, Chips & Eggs)
-- `quantity` — number of units sold
-- `unit_price_ugx` — price per unit
-- `total_ugx` — quantity × unit_price_ugx
-- `category` — food / drink / other
-- `note` — optional (special order, discount, etc.)
-
-### feza_expenses.csv
-`date, item, amount_ugx, category, note`
-- `date` — purchase date (YYYY-MM-DD)
-- `item` — ingredient or cost item (e.g. Chicken, Matooke, Irish Potatoes, Coriander, Transport)
-- `amount_ugx` — cost paid
-- `category` — ingredient / transport / utilities / other
-- `note` — optional (supplier, market, etc.)
-
-### feza_profit_loss.csv
-`date, total_sales_ugx, total_expenses_ugx, gross_profit_ugx, kitchen_rent_ugx, chef_salary_ugx, waitress_salary_ugx, net_profit_ugx, note`
-- `gross_profit_ugx` = total_sales_ugx − total_expenses_ugx
-- `kitchen_rent_ugx` — daily share of monthly rent (monthly rent / trading days in month); leave blank if tracking rent in `liabilities.csv` only
-- `chef_salary_ugx` — daily share of monthly chef salary; leave blank if tracking in `liabilities.csv` only
-- `waitress_salary_ugx` — daily share of weekly waitress salary; leave blank if tracking in `liabilities.csv` only
-- `net_profit_ugx` = gross_profit_ugx − kitchen_rent_ugx − chef_salary_ugx − waitress_salary_ugx
+| Code | Account | Type |
+|------|---------|------|
+| 201  | Business Cash | Asset |
+| 401  | Accounts Payable | Liability |
+| 601  | Feza Sales | Revenue |
+| 701  | Cost of Goods Sold | Expense |
+| 702  | Rent Expense | Expense |
+| 703  | Salaries Expense | Expense |
+| 704  | Utilities Expense | Expense |
+| 705  | Transport Expense | Expense |
 
 ## Recording a new trading day
-1. Add one row per sale to `feza_sales.csv`.
-2. Add one row per expense item to `feza_expenses.csv`.
-3. Compute totals:
-   - Total sales = sum `total_ugx` for that date in `feza_sales.csv`
-   - Total expenses = sum `amount_ugx` for that date in `feza_expenses.csv`
-   - Gross profit = Total sales − Total expenses
-4. Add one row to `feza_profit_loss.csv` with computed totals.
-5. If gross profit > 0: record net cash available for Paul Obunga withdrawal or debt service.
-6. If gross profit < 0 (loss day): flag in `financial_analysis/YYYY_MM_DD.md`.
+
+```python
+from db_manager import get_db_connection, record_transaction
+
+conn = get_db_connection()
+
+# Record sales — Dr Business Cash (201), Cr Feza Sales (601)
+record_transaction(conn, '2026-09-10', '201', '601', 47000, 'Feza daily sales 10 Sep')
+
+# Record expenses — Dr COGS (701), Cr Business Cash (201)
+record_transaction(conn, '2026-09-10', '701', '201', 17000, 'Chicken ingredient')
+record_transaction(conn, '2026-09-10', '701', '201', 1000,  'Matooke')
+record_transaction(conn, '2026-09-10', '705', '201', 6000,  'Ingredient transport')
+
+conn.commit()
+conn.close()
+```
 
 ## Standard computations
 
-### Daily P&L
-- Gross profit = Total sales − Total ingredient/operating expenses
-- Net profit = Gross profit − daily share of rent − daily share of staff salaries
+### Daily P&L query
 
-### Weekly summary
-- Total sales = sum `total_ugx` in `feza_sales.csv` for the week
-- Total expenses = sum `amount_ugx` in `feza_expenses.csv` for the week
-- Weekly gross profit = Total sales − Total expenses
+```python
+from db_manager import get_db_connection
+import sqlite3
 
-### Monthly summary
-- Monthly sales = sum `total_ugx` in `feza_sales.csv` for the month
-- Monthly expenses = sum `amount_ugx` in `feza_expenses.csv` for the month
-- Monthly gross profit = Monthly sales − Monthly expenses
-- Monthly net profit = Monthly gross profit − kitchen rent (400,000) − chef salary (400,000) − waitress salary (~152,000 for 4 weeks)
-- **Monthly break-even point** = kitchen rent + chef salary + waitress salary = **952,000 UGX/month**
+conn = get_db_connection()
+cursor = conn.cursor()
+
+date = '2026-09-10'
+
+cursor.execute("""
+    SELECT
+        SUM(CASE WHEN a.account_code = '601' THEN je.credit ELSE 0 END) as sales,
+        SUM(CASE WHEN a.account_code IN ('701','702','703','704','705') THEN je.debit ELSE 0 END) as expenses
+    FROM journal_entries je
+    JOIN chart_of_accounts a ON je.account_id = a.id
+    JOIN journals j ON je.journal_id = j.id
+    WHERE j.date = ?
+""", (date,))
+row = cursor.fetchone()
+print(f"Sales: {row[0]:,.0f}  Expenses: {row[1]:,.0f}  Gross Profit: {(row[0] or 0)-(row[1] or 0):,.0f}")
+conn.close()
+```
+
+### Monthly P&L
+
+Filter `journals.date` by `strftime('%Y-%m', date) = '2026-09'`. Sum credits on 601 for revenue, sum debits on 701–705 for expenses.
 
 ### Best-selling items
-- Group `feza_sales.csv` by `item`, sum `total_ugx` and `quantity` — highest revenue and volume items
 
-### Cost analysis
-- Group `feza_expenses.csv` by `item`, sum `amount_ugx` — highest cost ingredients
-- Cost-to-sales ratio = Total expenses / Total sales (target < 60%; current: 27,500 / 47,000 = 58.5%)
+Query `feza_business` table (sales records) grouped by `item`, order by `total DESC`.
 
-## Business operating costs (monthly fixed costs)
-| Cost | Amount (UGX/month) | Tracked in |
-|---|---|---|
-| Kitchen rent (Club17 Management) | 400,000 | `liabilities.csv` (rent_business) |
-| Chef salary | 400,000 | `liabilities.csv` (salary_business) |
-| Waitress salary | ~152,000 (38k × 4 weeks) | `liabilities.csv` (salary_business) |
-| **Total fixed costs** | **~952,000** | |
+### Break-even analysis
+
+| Fixed cost | UGX/month |
+|------------|-----------|
+| Kitchen rent (Club17) | 400,000 |
+| Chef salary | 400,000 |
+| Waitress salary | ~152,000 |
+| **Monthly break-even** | **952,000** |
+
+Weekly pace needed: 952,000 / 4 = **238,000 UGX gross profit/week**.
 
 ## Transferring profit to personal finances
-- When Paul Obunga withdraws cash from Feza Kitchen profit:
-  - Record in `cash_account.csv` as credit (cash received), category = `income`
-  - Record in `income.csv` as new row, source = "Feza Kitchen & Grill", category = `business`
-  - Do NOT record in `feza_expenses.csv` — Paul Obunga's withdrawal is not a business expense
+
+When Paul Obunga withdraws cash from Feza profit:
+
+```python
+# Dr Cash (101) — personal cash increases
+# Cr Business Cash (201) — business cash decreases
+record_transaction(conn, '2026-10-07', '101', '201', amount,
+                   'Feza profit withdrawal to personal cash')
+# Also record as personal income
+record_transaction(conn, '2026-10-07', '101', '651', amount,
+                   'Feza Kitchen & Grill income')
+```
 
 ## Red flags
+
 - Daily gross profit < 0 → flag: "Loss day — expenses exceed sales"
-- Weekly gross profit < 238,000 (weekly share of 952k monthly fixed costs) → flag: "Below break-even pace"
+- Weekly gross profit < 238,000 → flag: "Below break-even pace"
 - Monthly gross profit < 952,000 → flag: "Business not covering fixed operating costs"
-- Single ingredient > 40% of daily expenses → flag: "High ingredient concentration risk"
-- No sales recorded for 2+ consecutive days → flag: "Trading gap — verify kitchen is operational"
+- No sales journals on account 601 for 2+ consecutive days → flag: "Trading gap — verify kitchen is operational"
+- Single expense journal > 40% of daily total expenses → flag: "High cost concentration"
